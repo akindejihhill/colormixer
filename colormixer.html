@@ -77,7 +77,7 @@
 		appearance: none;
 		width: 25px;
 		height: 25px;
-		border-radius: 50%; 
+		border-radius: 50%;
 		background: red;
 		cursor: pointer;
 	    }
@@ -214,10 +214,6 @@
             const blueRatio = document.getElementById('blue-ratio');
 
             const body = document.body;
-            
-            let redDenominator;
-            let greenDenominator;
-            let blueDenominator;
 
             function parseRatio(ratioString) {
                 const ratioRegex = /^\d+\/\d+$/; // Regex: Integer/Integer
@@ -339,7 +335,6 @@
 	  redRatio.addEventListener('input', () => {
 	    const ratio = parseRatio(redRatio.value);
 	    if (ratio) {
-	      redDenominator = ratio.denominator;
 	      decimal = ratio.numerator / ratio.denominator;
 	      redSlider.value = decimal;
 	      redInput.value = decimal;
@@ -354,7 +349,6 @@
 	  greenRatio.addEventListener('input', () => {
 	    const ratio = parseRatio(greenRatio.value);
 	    if (ratio) {
-	      greenDenominator = ratio.denominator;
 	      decimal = ratio.numerator / ratio.denominator;
 	      greenSlider.value = decimal;
 	      greenInput.value = decimal;
@@ -368,7 +362,6 @@
 	  blueRatio.addEventListener('input', () => {
 	    const ratio = parseRatio(blueRatio.value);
 	    if (ratio) {
-	      blueDenominator = ratio.denominator;
 	      decimal = ratio.numerator / ratio.denominator;
 	      blueSlider.value = decimal;
 	      blueInput.value = decimal;
