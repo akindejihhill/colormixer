@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decimal Color Mixer</title>
+        <style>
+	    
+            body {
+                font-family: sans-serif;
+                text-align: center;
+                font-size: 20px;
+            }
+            
+            .page-title{
+            	background-color: white;
+            }
+            
+            label{
+            	color: white;
+            }
+            
+            .redlabel{
+            	background-color: red;
+            	font-size: 40px;
+            }            
+                        
+            .greenlabel{
+            	background-color: green;
+            	font-size: 40px;
+            }
+            
+            .bluelabel{
+            	background-color: blue;
+            	font-size: 40px;
+            }
+
+            .color-container {
+                display: inline-block;
+                width: 3.5in;
+                margin: 10px;
+            }
+            
+            @media only screen and (orientation: portrait) {
+		.color-container {
+		    display: block;
+		    margin: 30px auto;
+                }
+	    }
+
+            .color-box {
+                width: 100%;
+                height: 3.5in;
+                border: 1px solid black;
+                margin-bottom: 10px;
+            }
+
+            .input-set {
+                width: 100%;
+            }
+            
+            @media only screen and (orientation: portrait) {
+            	.input-control{
+            	    font-size : 40px;
+            	}
+            }
+
+            .slider {
+	        appearance: none;
+	        border-radius: 15px;
+                width: 100%;
+                height: 35px;
+                background: grey;
+                border: solid black;
+            }
+            
+	    .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%; 
+		background: red;
+		cursor: pointer;
+	    }
+	    
+	    #green-slider::-webkit-slider-thumb{
+	        background: green;
+	    }
+	    
+	    #blue-slider::-webkit-slider-thumb{
+	        background: blue;
+	    }
+
+            .input-control {
+                width: 45%;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="page-title">Decimal Color Mixer</h1>
+
+        <div id="red-container" class="color-container">
+            <label class="redlabel" for="red-slider">Red:</label>
+            <input
+                type="range"
+                id="red-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.0"
+                class="slider"
+            />
+            <div class="input-set">
+                <input
+                    type="number"
+                    class="input-control"
+                    id="red-input"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.0"
+                />
+                <input
+                    type="text"
+                    class="input-control"
+                    id="red-ratio"
+                    name="red-ratio"
+                    value="0/10"
+                />
+            </div>
+            <div id="red-box" class="color-box"></div>
+        </div>
+
+        <div id="green-container" class="color-container">
+            <label class="greenlabel" for="green-slider">Green:</label>
+            <input
+                type="range"
+                id="green-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.0"
+                class="slider"
+            />
+            <div class="input-set">
+                <input
+                    type="number"
+                    class="input-control"
+                    id="green-input"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.0"
+                />
+                <input
+                    type="text"
+                    class="input-control"
+                    id="green-ratio"
+                    name="green-ratio"
+                    value="0/10"
+                />
+            </div>
+            <div id="green-box" class="color-box"></div>
+        </div>
+
+        <div id="blue-container" class="color-container">
+            <label class="bluelabel" for="blue-slider">Blue:</label>
+            <input
+                type="range"
+                id="blue-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.0"
+                class="slider"
+            />
+            <div class="input-set">
+                <input
+                    type="number"
+                    class="input-control"
+                    id="blue-input"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.0"
+                />
+                <input
+                    type="text"
+                    class="input-control"
+                    id="blue-ratio"
+                    name="blue-ratio"
+                    value="0/10"
+                />
+            </div>
+            <div id="blue-box" class="color-box"></div>
+        </div>
+
+        <script>
+
+            const redSlider = document.getElementById("red-slider");
+            const redInput = document.getElementById("red-input");
+            const redBox = document.getElementById("red-box");
+
+            const greenSlider = document.getElementById("green-slider");
+            const greenInput = document.getElementById("green-input");
+            const greenBox = document.getElementById("green-box");
+
+            const blueSlider = document.getElementById("blue-slider");
+            const blueInput = document.getElementById("blue-input");
+            const blueBox = document.getElementById("blue-box");
+            
+            const redRatio = document.getElementById('red-ratio');
+            const greenRatio = document.getElementById('green-ratio');
+            const blueRatio = document.getElementById('blue-ratio');
+
+            const body = document.body;
+            
+            let redDenominator;
+            let greenDenominator;
+            let blueDenominator;
+
+            function parseRatio(ratioString) {
+                const ratioRegex = /^\d+\/\d+$/; // Regex: Integer/Integer
+                if (!ratioRegex.test(ratioString)) {
+                    return null; // Invalid format
+                }
+
+                const parts = ratioString.split("/");
+                const numerator = parseInt(parts[0]);
+                const denominator = parseInt(parts[1]);
+
+                if (
+                    isNaN(numerator) ||
+                    isNaN(denominator) ||
+                    numerator / denominator > 1 ||
+                    numerator / denominator < 0 ||
+                    denominator === 0
+                ) {
+                    return null; // Invalid numbers or division by zero
+                }
+
+                return { numerator, denominator };
+            }
+            
+         
+            function decimalToRatio(decimal) {	            
+              const roundedNumber = Math.round(Math.abs(decimal) * 10000) / 10000; /*rounding to 4 decimal places*/
+              const wholeNumber = Math.floor(roundedNumber);
+              const stringified = String(roundedNumber); // Convert to string
+	      const decimalIndex = stringified.indexOf('.'); 
+    	      const decimals = decimalIndex === -1 ? "" : stringified.substring(decimalIndex + 1);
+              const decimalCount = decimals.length;
+              
+              //find the denominator and numerator
+              let denominator = 1;
+              for (i = 0; i < decimalCount; i++){
+                  denominator *= 10
+	      }              
+              const numerator = (wholeNumber * denominator) + Number(decimals);
+              return [numerator, denominator]
+            }
+
+            function updateColor() {
+                const redValue = parseFloat(redSlider.value);
+                const greenValue = parseFloat(greenSlider.value);
+                const blueValue = parseFloat(blueSlider.value);
+
+                body.style.backgroundColor = `rgb(${redValue * 255}, ${
+                    greenValue * 255
+                }, ${blueValue * 255})`;
+
+                redBox.style.backgroundColor = `rgb(${redValue * 255}, 0, 0)`;
+                greenBox.style.backgroundColor = `rgb(0, ${
+                    greenValue * 255
+                }, 0)`;
+                blueBox.style.backgroundColor = `rgb(0, 0, ${blueValue * 255})`;
+            }
+
+            // Slider event listeners
+            redSlider.addEventListener("input", () => {
+                redInput.value = redSlider.value;
+                const ratioArray = decimalToRatio(redSlider.value);
+                redRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+
+            greenSlider.addEventListener("input", () => {
+                greenInput.value = greenSlider.value;
+                const ratioArray = decimalToRatio(greenSlider.value);
+                greenRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+
+            blueSlider.addEventListener("input", () => {
+                blueInput.value = blueSlider.value;
+                const ratioArray = decimalToRatio(blueSlider.value);
+                blueRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+
+            // Input event listeners
+            redInput.addEventListener("input", () => {
+                const value = parseFloat(redInput.value);
+                if (isNaN(value) || value < 0 || value > 1) {
+                    redInput.value = ""; // Clear the input if invalid
+                    return;
+                }
+                redSlider.value = value;
+                const ratioArray = decimalToRatio(value);
+                redRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+
+            greenInput.addEventListener("input", () => {
+                const value = parseFloat(greenInput.value);
+                if (isNaN(value) || value < 0 || value > 1) {
+                    greenInput.value = "";
+                    return;
+                }
+                greenSlider.value = value;
+                const ratioArray = decimalToRatio(value);
+                greenRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+
+            blueInput.addEventListener("input", () => {
+                const value = parseFloat(blueInput.value);
+                if (isNaN(value) || value < 0 || value > 1) {
+                    blueInput.value = "";
+                    return;
+                }
+                blueSlider.value = value;
+                const ratioArray = decimalToRatio(value);
+                blueRatio.value = ratioArray[0] + "/" + ratioArray[1];
+                updateColor();
+            });
+            
+	  // Event listeners for ratio inputs
+	  redRatio.addEventListener('input', () => {
+	    const ratio = parseRatio(redRatio.value);
+	    if (ratio) {
+	      redDenominator = ratio.denominator;
+	      decimal = ratio.numerator / ratio.denominator;
+	      redSlider.value = decimal;
+	      redInput.value = decimal;
+	      updateColor();
+	    } else {
+	      // Show error message (e.g., near the input field)
+	      //alert("Invalid ratio format. Use format: integer/integer");
+	      //redRatio.value = ''; // Clear invalid input
+	    }
+	  });
+
+	  greenRatio.addEventListener('input', () => {
+	    const ratio = parseRatio(greenRatio.value);
+	    if (ratio) {
+	      greenDenominator = ratio.denominator;
+	      decimal = ratio.numerator / ratio.denominator;
+	      greenSlider.value = decimal;
+	      greenInput.value = decimal;
+	      updateColor();
+	    } else {
+	      //alert("Invalid ratio format. Use format: integer/integer");
+	      //greenRatio.value = '';
+	    }
+	  });
+
+	  blueRatio.addEventListener('input', () => {
+	    const ratio = parseRatio(blueRatio.value);
+	    if (ratio) {
+	      blueDenominator = ratio.denominator;
+	      decimal = ratio.numerator / ratio.denominator;
+	      blueSlider.value = decimal;
+	      blueInput.value = decimal;
+	      updateColor();
+	    } else {
+	      //alert("Invalid ratio format. Use format: integer/integer");
+	      //blueRatio.value = '';
+	    }
+	  });
+
+            // Initial color update
+            updateColor();
+        </script>
+    </body>
+</html>
