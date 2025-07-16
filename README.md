@@ -20,20 +20,39 @@ You can combine colors at different saturations to get an infinate variety of co
 
 * White - Set all the sliders to 1, and show that 1 is equivalent to 1/1.  Explain that white is what you get when all three colors are at full saturation.  They see the combined color in the background, and each individual color's saturation in the foreground.  
 
-* Grey - Ask the students to guess what color they think you will get if you set all three sliders half way.  Then demonstrate grey by setting all the sliders half way to reinforce that grey is half way between white and black.  If the sliders are clumbsy, you can set it perfectly half way by  setting the decimals to 0.5. 
+* Grey - Ask the students to guess what color they think you will get if you set all three sliders half way.  Then demonstrate grey by setting all the sliders half way to reinforce that grey is half way between white and black.  If the sliders are clumbsy, you can set it perfectly half way by  setting the decimals to 0.5.  Point out that 0.5 is equivalent to a half as well as 5/10.
 
 * Secondary colors - Demonstrate yellow by sliding Blue all the way down to 0, and sliding both Red and Yellow all the way up to one to turn the background yellow.  Explain that in the spectrum of light, red light mixed with green light makes yellow light.  Do the same with the other secondary colors
-  * Blue and Green make Turquoise
-  * Red and Blue make violet
+  * Blue and Green make Turquoise/Cyan
+  * Red and Blue make Magenta
 
 ## Hands on learning
-If you have a large touch screen available, students can take turns finding colors at the front of the class, or they can all participate from their seats if they have laptops available.  
+Give the students the fractions or decimals that they need for each primary color in order to make certain blends.  Have them tell you the names of the color they created.  Use terms like "half", "quarter", "three quarters", "a thrid" "two thirds" where possible, or "tenths" and "hundreths".  You might want to write the names of the colors in a word box on the board or on paper to help them name the colors correctly.
+
+If you have a large touch screen available, students can take turns finding colors at the front of the class, or they can all participate from their seats if they have laptops available.  It could also be performed as a center or performance task. 
+
+> Caution:  Maybe it's just computer weirdness or a case of "everything we think we know is wrong", but certain values may not give you what you expect.  For instance, putting "green" all the way up actually gives you what we call "lime" which is a much higher saturation than green.  What we call "green" is actually 0.5 saturation on the Green range.  So no, your eyes aren't playing tricks on you, but I recommend keeping things simple, and avoid the topic unless a student brings it up.  
 
 Color|red|green|blue|
 |-|-|-|-|
 |Navy|0|0|0.5|
-
-
-For assistance, you might want to write the names of the colors in a word box on the board or on paper so help them name the colors correctly.
-
+|Forest Green|0.13|0.55|0.13|
+|Aqua|0|0.5|0.5|
+|Orange|1|0.66|0|
+|Teal|0|0.5|0.66|
+|Gold|1|0.75|0|
+|Brown|0.1|0.06|0|
+|Sky blue|0.5|0.8|0.90|
+|Indigo|0.3|0|0.50|
+|Peach puff|1|0.85|0.75|
+|olive|0.5|0.5|0|
+|Maroon|0.5|0|0|
+|khaki|0.9|0.85|0.75|
+|violet|0.9|0.5|0.9|
+|coral|1|0.66|0.66|
+|Dark Green|0|0.4|0|
+|Lemon Chiffon|1|1|0.75|
+|silver|0.75|0.75|0.8|
+|Green yellow|0.66|1|0.2|
+|Crimson|0.85|0.08|0.20|
 
