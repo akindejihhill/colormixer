@@ -2,7 +2,7 @@
 A tool to demonstrate the relationships between decimals and fractions using color.  For hands on and visual learners.
 
 ## Demonstration
-Demonstrate how colors on a computer monitor, and other mediums of light, work slightly different than colors in paints and pigments, like they were taught in art class (praying that they still have art class).  Computer screens use a color theory called the "Additive Theory of Color", in which the primary colors are Red, Green and Blue (RGB).  However pigments like paint and magazine ink use the "Subtractive Theory of Color" where the primary colors are Magenta (redish), Yellow, and Cyan (Turquoise).   
+Demonstrate how colors on a computer monitor, and other mediums of light, work slightly different than colors in paints and pigments, like they were taught in art class (praying that they still have art class).  Computer screens use a color theory called the "Additive Theory of Color", in which the primary colors are Red, Green and Blue (RGB).  However pigments like paint and magazine ink use the "Subtractive Theory of Color" where the primary colors are Magenta, Yellow, and Cyan (Turquoise).   
 <img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/5b4b1a3c-1eed-4e33-b2bd-6b7838a4ef62" />
 
 "Why were we taught Red Yellow and Blue in elementary school?"  Two reasons:
