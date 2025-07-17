@@ -33,7 +33,7 @@ If you have a large touch screen available, students can take turns finding colo
 
 > Caution:  Maybe it's just computer weirdness or a case of "everything we think we know is wrong", but certain values may not give you what you expect.  For instance, putting "green" all the way up actually gives you what we call "lime" which is a much higher saturation than green.  What we call "green" is actually 0.5 saturation on the Green range.  So no, your eyes aren't playing tricks on you, but I recommend keeping things simple, and avoid the topic unless a student brings it up.  
 
-Color|red|green|blue|
+|Color|red|green|blue|
 |-|-|-|-|
 |Navy|0|0|0.5|
 |Forest Green|0.13|0.55|0.13|
