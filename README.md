@@ -29,7 +29,7 @@ You can combine colors at different saturations to get an infinate variety of co
 ## Hands on learning
 Give the students the fractions or decimals that they need for each primary color in order to make certain blends.  Have them tell you the names of the color they created.  Use terms like "half", "quarter", "three quarters", "a thrid" "two thirds" where possible, or "tenths" and "hundreths".  You might want to write the names of the colors in a word box on the board or on paper to help them name the colors correctly.
 
-If you have a large touch screen available, students can take turns finding colors at the front of the class, or they can all participate from their seats if they have laptops available.  It could also be performed as a center or performance task. 
+If you have a large touch screen available, students can take turns finding colors at the front of the class, or they can all participate from their seats if they have laptops available.  It could also be performed as a center, performance task, or small group lesson. 
 
 > Caution:  Maybe it's just computer weirdness or a case of "everything we think we know is wrong", but certain values may not give you what you expect.  For instance, putting "green" all the way up actually gives you what we call "lime" which is a much higher saturation than green.  What we call "green" is actually 0.5 saturation on the Green range.  So no, your eyes aren't playing tricks on you, but I recommend keeping things simple, and avoid the topic unless a student brings it up.  
 
@@ -45,14 +45,14 @@ If you have a large touch screen available, students can take turns finding colo
 |Sky blue|0.5|0.8|0.90|
 |Indigo|0.3|0|0.50|
 |Peach puff|1|0.85|0.75|
-|olive|0.5|0.5|0|
+|Olive|0.5|0.5|0|
 |Maroon|0.5|0|0|
-|khaki|0.9|0.85|0.75|
-|violet|0.9|0.5|0.9|
-|coral|1|0.66|0.66|
+|Khaki|0.9|0.85|0.75|
+|Violet|0.9|0.5|0.9|
+|Coral|1|0.66|0.66|
 |Dark Green|0|0.4|0|
 |Lemon Chiffon|1|1|0.75|
-|silver|0.75|0.75|0.8|
+|Silver|0.75|0.75|0.8|
 |Green yellow|0.66|1|0.2|
 |Crimson|0.85|0.08|0.20|
 
