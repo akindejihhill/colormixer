@@ -14,7 +14,7 @@ We are going to use decimals and fractions to mix colors on the computer screen,
 
 You can combine colors at different saturations to get an infinate variety of colors.  
 
-* Red, Green, and Blue - Set all the sliders to 0 (default) and then in turn, slowly slide each primary color to full saturation with the other colors still turned all the way down.  Demonstrate how the saturation of each color gets stronger as the slider approaches 1.  This is also a good time to point out that the fractions are not showing thier simplified versions, but are displayed according to the place values of the decimal numbers.  For instance, the equivalent of 0.19 will be show as 19/100 because 0.19 occupies the hundreths place.  Yet, the equivalent of 0.2 will display 2/10 because 0.2 only occupies the tenths place, even though it is equivalent to both 20/100 and 1/5.
+* Red, Green, and Blue - Set all the sliders to 0 (default) and then in turn, slowly slide each primary color to full saturation with the other colors still turned all the way down.  Demonstrate how the saturation of each color gets stronger as the slider approaches 1.  This is also a good time to point out that the fractions are not showing thier simplified versions, but are displayed according to the place values of the decimal numbers.  For instance, the equivalent of 0.19 will be shown as 19/100 because 0.19 occupies the hundreths place.  Yet, the equivalent of 0.2 will display 2/10 because 0.2 only occupies the tenths place, even though it is equivalent to both 20/100 and 1/5.
 
 * Black - Set all the sliders to 0 (this is the default), and show that 0.0 is equivalent to 0/10.  Explain that black is what you get when there is absolutely no saturation of color.
 
