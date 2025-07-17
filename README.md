@@ -6,7 +6,7 @@ Demonstrate how colors on a computer monitor, and other mediums of light, work s
 <img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/5b4b1a3c-1eed-4e33-b2bd-6b7838a4ef62" />
 
 "Why were we taught Red Yellow and Blue in elementary school?"  Two reasons:
-1) We didn't know any better for along times.  Artists have used Red, Yellow, and Blue in their mixing theory for centuries before the Subtractive Theory of Color was understood.
+1) We didn't know any better for a long time.  Artists have used Red, Yellow, and Blue in their mixing theory for centuries before the Subtractive Theory of Color was understood.
 2) It's easier for children because they are more familiar with the colors Red, yellow, and Blue, and they are close enough to Magenta, Yellow, and Cyan that it works well enough.
 So basically, the short answer is, because we always did it that way.  :-)
 
