@@ -1,5 +1,5 @@
 # colormixer
-A tool to demonstrate the relationships between decimals and fractions using color.  For hands on and visual learners.
+A tool to demonstrate the relationships between decimals and fractions using color.  For hands on and visual learners.  Access a live version hosted by github at <https://akindejihhill.github.io/colormixer/colormixer.html>
 
 ## Demonstration
 Demonstrate how colors on a computer monitor, and other mediums of light, work slightly different than colors in paints and pigments, like they were taught in art class (praying that they still have art class).  Computer screens use a color theory called the "Additive Theory of Color", in which the primary colors are Red, Green and Blue (RGB).  However pigments like paint and magazine ink use the "Subtractive Theory of Color" where the primary colors are Magenta, Yellow, and Cyan (Turquoise).   
